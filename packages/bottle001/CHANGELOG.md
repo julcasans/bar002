@@ -1,5 +1,30 @@
 # bottle001
 
+## 4.3.0
+
+### Minor Changes
+
+- d4e0a46: change name and surname
+
+### Patch Changes
+
+- 910b864: fix dependencies
+- Updated dependencies [d4e0a46]
+- Updated dependencies [910b864]
+  - bottle002@4.2.0
+  - bottle003@4.1.0
+  - bottle004@4.1.0
+
+## 4.3.0-rc.1
+
+### Patch Changes
+
+- 910b864: fix dependencies
+- Updated dependencies [910b864]
+  - bottle002@4.2.0-rc.1
+  - bottle003@4.1.0-rc.1
+  - bottle004@4.1.0-rc.1
+
 ## 4.3.0-rc.0
 
 ### Minor Changes
