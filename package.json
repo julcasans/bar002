@@ -1,0 +1,46 @@
+{
+  "name": "bar001",
+  "version": "1.0.0",
+  "description": "Laboratory for mono-repos & Github actions",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "clean": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
+    "build": "wireit",
+    "changeset": "changeset",
+    "end-task": "changeset && git add --all",
+    "version": "npm run changeset version",
+    "release": "npm run build && npm run changeset publish",
+    "beta:on": "node scripts/preEnter.js beta",
+    "beta:off": "node scripts/preExit.js",
+    "rc:on": "node scripts/preEnter.js rc",
+    "rc:off": "node scripts/preExit.js",
+    "test": "wireit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.5",
+    "husky": "^9.0.11",
+    "@playwright/test": "^1.44.1",
+    "wireit": "^0.14.1"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "./packages/bottle001:build"
+      ]
+    },
+    "test": {
+      "dependencies": [
+        "./packages/bottle001:test",
+        "./packages/bottle002:test",
+        "./packages/bottle003:test",
+        "./packages/bottle004:test"
+      ]
+    }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,84 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set up Git identity
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+
+      # # this step should be executed only on branch release-candidate or tag is x.y.z-rc.n
+      # - name: Enter pre-release version
+      #   if: startsWith(github.ref, 'refs/heads/release') || (startsWith(github.ref, 'refs/tags') && contains(github.ref, '-rc.'))
+      #   run: npm run rc:on
+
+      - name: Show github.ref value
+        run: echo "The value of github.ref is ${{ github.ref }}"
+
+      #   # this step should be executed only if branch is main or tag is x.y.z
+      # - name: Exit pre-release version
+      #   if: startsWith(github.ref, 'refs/heads/main/') || (startsWith(github.ref, 'refs/tags') && !contains(github.ref, '-rc.'))
+      #   run: npm run rc:off
+
+      # - name: Create release version
+      #   run: npm run version
+      #   # This expects you to have a script called release which does a build for your packages and calls changeset publish
+
+      # - name: Git status
+      #   run: git status
+
+      # - name: Stage files
+      #   run: git add --all
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Git status
+      #   run: git status
+
+      # - name: Commit version
+      #   run: git commit -m "Release version"
+      #   env:
+      #     HUSKY: 0
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # - name: Git status
+      #   run: git status
+
+      # - name: Git Push to release-candidate branch
+      #   if: startsWith(github.ref, 'refs/heads/release') || (startsWith(github.ref, 'refs/tags') && contains(github.ref, '-rc.'))
+      #   run: git push origin HEAD:release-candidate
+
+      # - name: Git Push to main branch
+      #   if: startsWith(github.ref, 'refs/heads/main/') || (startsWith(github.ref, 'refs/tags') && !contains(github.ref, '-rc.'))
+      #   run: git push origin HEAD:main
+
+      - name: Setup .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
+      - name: Publish
+        run: npm run release
+        # This expects you to have a script called release which does a build for your packages and calls changeset publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

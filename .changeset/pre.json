@@ -1,0 +1,13 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "bottle001": "4.2.0",
+    "bottle002": "4.1.0",
+    "bottle003": "4.0.0",
+    "bottle004": "4.0.0"
+  },
+  "changesets": [
+    "bright-flies-add"
+  ]
+}

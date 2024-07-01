@@ -1,0 +1,17 @@
+{
+  "name": "bottle002",
+  "version": "4.2.0-rc.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "bottle003": "˜4.0.0",
+    "bottle004": "^4.1.0-rc.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
