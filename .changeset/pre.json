@@ -8,6 +8,7 @@
     "bottle004": "4.0.0"
   },
   "changesets": [
-    "bright-flies-add"
+    "bright-flies-add",
+    "few-moles-smell"
   ]
 }
