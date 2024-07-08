@@ -1,0 +1,13 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "bottle001": "4.3.2",
+    "bottle002": "4.2.2",
+    "bottle003": "4.3.0",
+    "bottle004": "4.3.0"
+  },
+  "changesets": [
+    "long-shoes-count"
+  ]
+}

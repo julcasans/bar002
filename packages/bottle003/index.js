@@ -1,3 +1,3 @@
 export function getSurname() {
-  return 'Perales Ramos';
+  return 'Gómez Ramos';
 }
