@@ -1,5 +1,17 @@
 # bottle004
 
+## 4.2.0
+
+### Minor Changes
+
+- 2988bb3: change name and surname
+
+## 4.2.0-rc.0
+
+### Minor Changes
+
+- 2988bb3: change name and surname
+
 ## 4.1.0
 
 ### Minor Changes
