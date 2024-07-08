@@ -1,3 +1,3 @@
 export function getNames() {
-  return 'Pedro Pablo';
+  return 'Juan Carlos';
 }

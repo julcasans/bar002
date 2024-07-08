@@ -1,5 +1,23 @@
 # bottle001
 
+## 4.3.2
+
+### Patch Changes
+
+- Updated dependencies [cbe9158]
+  - bottle003@4.3.0
+  - bottle004@4.3.0
+  - bottle002@4.2.2
+
+## 4.3.2-rc.0
+
+### Patch Changes
+
+- Updated dependencies [cbe9158]
+  - bottle003@4.3.0-rc.0
+  - bottle004@4.3.0-rc.0
+  - bottle002@4.2.2-rc.0
+
 ## 4.3.1
 
 ### Patch Changes
