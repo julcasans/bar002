@@ -1,6 +1,6 @@
 {
   "name": "bottle001",
-  "version": "4.3.2",
+  "version": "4.3.3",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -9,9 +9,9 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "bottle002": "~4.2.2",
-    "bottle003": "~4.3.0",
-    "bottle004": "~4.3.0"
+    "bottle002": "~4.2.3",
+    "bottle003": "~4.4.0",
+    "bottle004": "~4.4.0"
   },
   "keywords": [],
   "author": "",

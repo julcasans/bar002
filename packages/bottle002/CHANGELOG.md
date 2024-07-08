@@ -1,5 +1,21 @@
 # bottle002
 
+## 4.2.3
+
+### Patch Changes
+
+- Updated dependencies [e023522]
+  - bottle003@4.4.0
+  - bottle004@4.4.0
+
+## 4.2.3-rc.0
+
+### Patch Changes
+
+- Updated dependencies [e023522]
+  - bottle003@4.4.0-rc.0
+  - bottle004@4.4.0-rc.0
+
 ## 4.2.2
 
 ### Patch Changes
