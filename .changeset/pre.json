@@ -1,0 +1,13 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "bottle001": "4.3.1",
+    "bottle002": "4.2.1",
+    "bottle003": "4.2.0",
+    "bottle004": "4.2.0"
+  },
+  "changesets": [
+    "gold-dancers-act"
+  ]
+}
